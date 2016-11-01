@@ -9,16 +9,17 @@
     <script></script>
 </head>
 <body>
-<div class="main">
+<div class="main scroll">
 <div class="banner">
     <div class="content clearfix">
-        <div class="nav clearfix">
-            <ul class="nav_list">
-                <li><a href="javascript:;">我</a></li>
-                <li><a href="javascript:;">兴趣</a></li>
-                <li><a href="javascript:;">哈哈</a></li>
-                <li><a href="javascript:;">联系方式</a></li>
-            </ul>
+        <div class="color-1">
+            <nav class="cl-effect-1">
+                <a href="#">我</a>
+                <a href="#">兴趣</a>
+                <a href="#">小玩意</a>
+                <a href="#">联系方式</a>
+
+            </nav>
         </div>
         <div class="face">
             <img src="img/face.jpg" alt="face"/>
@@ -28,14 +29,14 @@
         <div class="weclome">Welcome to my website!</div>
 
         <ul class="intro">
-            <li><i class="intr glyphicon glyphicon-wrench"></i><a href="javascript:;">Age : <span>21</span></a></li>
-            <li><i class="intr glyphicon glyphicon-pencil"></i><a href="javascript:;">Country : <span>火星城</span></a></li>
-            <li><i class="intr glyphicon glyphicon-music"></i><a href="javascript:;">Working at : <span>天威</span></a></li>
+            <li><i class="intr intr_1"></i><a href="javascript:;">Age : <span>21</span></a></li>
+            <li><i class="intr intr_2"></i><a href="javascript:;">Country : <span>火星城</span></a></li>
+            <li><i class="intr intr_3"></i><a href="javascript:;">Working at : <span>天威</span></a></li>
         </ul>
     </div>
 </div>
 </div>
-<div class="intersting clearfix">
+<div class="intersting scroll clearfix">
     <div class="bg">
         <div></div>
         <div class="inter">
@@ -112,9 +113,65 @@
         </div>
     </div>
 </div>
-<div class="blog">
+<div class="memory scroll"><!--回忆-->
     <div class="blog_bg">
+        <div class="works clearfix"><!--作品-->
+        <div class="title">
+            <h3>MY　MEMORIES</h3>
+        </div>
 
+            <div class="text step2 forceDown" data-delay="1000">
+                <P class="pp">
+                       时间过得真快啊！<br/>
+                    想不到这就结束了。<br/>
+                    四个月，弹指一挥间。<br/>
+                    还记得在当初来的第一个月， 刚接触编程的我被这种高强度的训练给折磨的苦不堪言的时候，我不停的给自己鼓劲，不停的鼓劲，鼓劲。<br/>
+                    第一个月的时候，我就写下了一篇日志来激励自己，想不到这么快就过去了。<br/>
+                    嗯，这四个月过后的，不是结局，而是真正的开始。<br/>
+                    我只能往前不停的奔跑，奔跑。<br/>
+                </P>
+
+            </div><!--文字-->
+            <div class="tab clearfix">
+                <a href="javascript:;" class="prev">prev</a>
+                <a href="javascript:;" class="next">next</a>
+               <ul class="tab_list">
+                   <li><img src="img/fan2.jpg" alt=""/></li>
+                   <li><img src="img/fan.png" alt=""/></li>
+                   <li><img src="img/fan3.jpg" alt=""/></li>
+                   <li><img src="img/fan4.jpg" alt=""/></li>
+               </ul>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contact scroll">
+    <div class="c_content">
+
+        <h5>CONTACT</h5>
+        <div class="information clearfix">
+            <ul class="in_list clearfix">
+            <li class="email1">
+                <span></span>
+                <a href="javascript:;">z470275501@sina.com</a>
+            </li>
+            <li class="email2">
+                <span></span>
+                <a href="javascript:;">15203329197</a>
+            </li>
+            </ul>
+            <div class="form">
+            <form>
+                <input type="text" class="text_1" value="Your Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}"/>
+                <input type="text" class="text_1" value="Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email';}">
+                <textarea onfocus="if(this.value == 'Your Message') this.value='';" onblur="if(this.value == '') this.value='Your Message';" >Your Message</textarea>
+                <input type="button" value="SEND MESSAGE" class="button">
+            </form>
+            </div>
+        </div>
     </div>
 </div>
 </body>
