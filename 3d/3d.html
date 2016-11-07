@@ -1,0 +1,37 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>3D图片环 - by 智能社 - [url]www.zhinengshe.com[/url]</title>
+    <link href="css/commit.css" type="text/css" rel="stylesheet" />
+    <script src="js/commit.js"></script>
+</head>
+
+<body>
+<div id="div1">
+    <strong id="div2"></strong>
+</div>
+<style>
+    .picBox{
+        width:100%;
+        clear:both;
+        overflow:hidden;
+        position:fixed;
+        bottom:20px;
+        text-align:center;
+        color:#FFF;
+        font-family:Verdana;
+        _position: absolute;
+        _top: expression(document.documentElement.clientHeight - document.getElementById('picBox').offsetHeight - 20 + "px");
+        z-index:99999;
+    }
+    .picBox a{
+        color:#FFF;
+        text-decoration:none;
+    }
+</style>
+<div class="picBox" id="picBox">
+</div>
+</body>
+</html>

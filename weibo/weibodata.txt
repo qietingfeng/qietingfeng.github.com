@@ -1,0 +1,58 @@
+﻿{
+	faceInfo:{url:'images/zhang.jpg',username:'你说这世界哈哈',followNum:73,fansNum:3,blog:122},
+	hotTopic:[
+			{title:'#当幸福来开门#',href:'http://www.baidu.com',hitNum:1},
+			{title:'#从你的全世界经过#',href:'http://www.baidu.com',hitNum:2},
+			{title:'#大鱼海棠#',href:'http://www.baidu.com',hitNum:3},
+			{title:'#假如爱有天意#',href:'http://www.baidu.com',hitNum:4},
+			{title:'#忠犬八公#',href:'http://www.baidu.com',hitNum:5},
+			{title:'#101只花斑狗#',href:'http://www.baidu.com',hitNum:6},
+			{title:'#湄公河惨案#',href:'http://www.baidu.com',hitNum:7},
+			{title:'#嘻嘻哈哈#',href:'http://www.baidu.com',hitNum:8},
+			{title:'#7号房的礼物#',href:'http://www.baidu.com',hitNum:9},
+			{title:'#美丽人生#',href:'http://www.baidu.com',hitNum:10},
+			{title:'#阿甘正传#',href:'http://www.baidu.com',hitNum:11}
+	],
+	list:[
+		{
+			username:'就爱弄头发',
+			faceImg:'images/333.jpg',
+			title:'超甜蜜 [心]',
+			time:'1475842394',
+			content:'“学院风圆领卫衣 | 喜欢请关注@男友也要潮打扮',
+			imgchild:[
+				'images/temp/555.jpg',
+			]
+		},
+		{
+			username:'英国购物折扣',
+			faceImg:'images/666.jpg',
+			title:'疯囤！法国药妆33% OFF，全球直邮，部分可邮中国（国际邮费£4.95，可追踪£7.95）！[给力] 热门：【雅漾】- O网页链接【优色林】- O网页链接【理肤泉】- O网页链接【薇姿】- O网页链接【欧树】- O网页链接【Darphin】- O网页链接',
+			time:'1475842394',
+			content:'【Darphin】全线33% OFF，全球直邮，包括中国！[给力] 法国皮肤科医生创立的顶级芳疗护肤品牌！有 “熬夜神器” 和 “治痘神器” 之称的两款芳香调理膏必收，消除倦容，提升光泽度，快速消痘，皮肤由内到外透着好！芳香精露、补水系列、敏感肌系列、眼部保养等也超赞！[心] 抢购：O网页链接',
+			imgchild:[
+				'images/temp/777.jpg',
+			]
+		},{
+			username:'教你套男装',
+			faceImg:'images/tu.jpg',
+			title:'SHIN',
+			time:'1475842394',
+			content:'“',
+			imgchild:[
+				'images/temp/yi.jpg',
+			]
+		},{
+			username:'天府早报',
+			faceImg:'images/guo.jpg',
+			title:'如果你觉得国庆七天时间短的话...那么从今天开始你就会知道七天有多长了[笑cry][笑cry]',
+			time:'1475842394',
+			content:'“',
+			imgchild:[
+				'images/temp/aa.gif',
+			]
+		}
+
+	]
+
+}
