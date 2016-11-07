@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/comm.js"></script>
+    <script src="js/ajax.js"></script>
+    <script>
+        window.onload=function(){
+
+            var oUl=document.getElementById('list_info'),
+                oUserCont=document.getElementById('user_face'),
+                oHotTop=document.getElementById('hot_info'),
+                oChange=getByClass(oHotTop,'change')[0],
+                oUlInfo=getByClass(oHotTop,'hot_info_ul')[0],
+
+                //当前页数
+                currentPage=1,
+
+                //每页条数
+                pageNum=6;
+
+
+            ajax({
+                url:'weibodata.txt',
+                success:function(res){
+                    var json=eval('('+res+')');
+                    var arr=json.list;
+                    var userInfo=json.faceInfo;
+                    var hotToppic=json.hotTopic;
+                    //左侧微薄列表
+                    for(var i=0;i<arr.length;i++){
+                        var oLi=document.createElement('li');
+                        var str='',
+                            imgChild=arr[i].imgchild;
+                            str+='<img src="'+arr[i].faceImg+'" alt=""/>'+
+                                '<div class="info">'+
+                                '<h3>'+arr[i].username+'</h3>'+
+                                '<div class="time">'+getYear(arr[i].time*1000)+'</div>'+
+                                '<div class="title">'+arr[i].title+'</div>'+
+                                '<p>'+arr[i].content+'</p>';
+
+                                if(imgChild.length!=0){
+                                    str+='<dl class="imglist">';
+                                    for(var j=0;j<imgChild.length;j++){
+                                        str+='<dd><img src="'+imgChild[j]+'" alt=""/></dd>';
+                                    }
+                                    str+='</dl>';
+                                }
+
+                                str+='</div></li>';
+
+                        oLi.innerHTML=str;
+                        oUl.appendChild(oLi);
+                    }
+
+                    //用户信息
+                    oUserCont.innerHTML='<div class="user_detail">'+
+                            '<img src="'+userInfo.url+'" alt=""/>'+
+                            '<h2>'+userInfo.username+'</h2>'+
+                            '</div>'+
+                            '<ul>'+
+                            '<li>'+
+                            '<strong>'+userInfo.followNum+'</strong>'+
+                            '<span>关注</span>'+
+                            '</li>'+
+                            '<li>'+
+                            '<strong>'+userInfo.fansNum+'</strong>'+
+                            '<span>粉丝</span>'+
+                            '</li>'+
+                            '<li class="no">'+
+                            '<strong>'+userInfo.blog+'</strong>'+
+                            '<span>微博</span>'+
+                            '</li>'+
+                            '</ul>';
+
+                    //总页数
+                    if(hotToppic.length==0)return;
+                    var totalPage=Math.ceil(hotToppic.length/pageNum);
+
+                    for (var i = (currentPage-1) * pageNum; i < currentPage * pageNum; i++) {
+                        var oLi = document.createElement('li');
+                        oLi.innerHTML = '<span>' + hotToppic[i].hitNum + '</span><a href="' + hotToppic[i].href + '" target="_blank">' + hotToppic[i].title + '</a>';
+                        oUlInfo.appendChild(oLi);
+                    }
+
+                    //换一换
+                    oChange.onclick=function() {
+                        currentPage++;
+                        if (currentPage <= totalPage) {
+                        }else{
+                            currentPage=1;
+                        }
+                        oUlInfo.innerHTML='';
+                        hotToppic.sort(function(){
+                            return Math.random()-0.5;
+                        });
+                        for (var i = 0; i < 6; i++) {
+                            var oLi = document.createElement('li');
+                            oLi.innerHTML = '<span>' + hotToppic[i].hitNum + '</span><a href="' + hotToppic[i].href + '" target="_blank">' + hotToppic[i].title + '</a>';
+                            oUlInfo.appendChild(oLi);
+                        }
+                    }
+
+                },
+                error:function(err){
+                    console.log('错误：'+err);
+                }
+            })
+        };
+
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <div class="head">
+            <h1 class="logo"><img src="images/WB_logo.png" alt=""/></h1>
+            <div class="search_box">
+                <input type="text" class="search_text" placeholder="大家都在搜：从你的全世界经过"/>
+                <input type="button" class="search_btn"/>
+            </div>
+            <div class="top_nav">
+                <ul>
+                    <li class="active">
+                        <em></em><a href="#">首页</a>
+                    </li>
+                    <li>
+                        <em class="em02"></em><a href="#">视频</a>
+                    </li>
+                    <li>
+                        <em class="em03"></em><a href="#">发现</a>
+                    </li>
+                    <li class="active_1">
+                        <em class="em04"></em><a href="#">游戏</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="user_info">
+                <div class="user_text">
+                    <em></em>你说这世界哈哈
+                </div>
+
+                <a href="#" class="icon01"></a>
+                <a href="#" class="icon02"></a>
+                <a href="#" class="icon03"></a>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container clearfix">
+    <!--nav-->
+    <div class="nav">
+        <ul class="top">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">我的收藏</a></li>
+            <li><a href="#">我的赞</a></li>
+        </ul>
+        <ul class="mid">
+            <li><a href="#"><em class="icon_blog"></em>热门微博</a></li>
+            <div class="icon"></div>
+        </ul>
+        <ul>
+            <li><a href="#"><em class="icon_friend"></em>好友圈</a></li>
+            <li><a href="#"><em class="icon_care"></em>特别关注</a></li>
+            <li><a href="#"><em class="icon_group"></em>群微博</a></li>
+            <li><a href="#"><em class="icon_quietly"></em>悄悄关注</a></li>
+        </ul>
+
+    </div>
+    <!--nav end-->
+
+    <!--content-->
+    <div class="content">
+        <!--list-->
+        <div class="list">
+            <div class="list_send">
+                <div class="tit"><span>还可以输入<strong>140</strong>个字</span>有什么新鲜事想告诉大家?</div>
+                <textarea class="text_area"></textarea>
+                <div class="send">
+                    <input type="button" class="send_btn" value="发送"/>
+                    <a href="#" class="a1">表情</a>
+                    <a href="#" class="a2">图片</a>
+                    <a href="#" class="a3">视频</a>
+                    <a href="#" class="a4">话题</a>
+                    <a href="#" class="a5">头条文章</a>
+                </div>
+
+            </div>
+            <ul id="list_info">
+                <!--<li>
+                    <img src="images/1.jpg" alt=""/>
+                    <div class="info">
+                        <h3>会飞的习大大</h3>
+                        <div class="time">2016-10-01 20:30:34</div>
+                        <div class="title">会飞的习大大</div>
+                        <p>
+                            “内容”
+                        </p>
+                        <dl class="imglist">
+                            <dd><img src="images/child/1.jpg" alt=""/></dd>
+                        </dl>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+        <!--list end-->
+
+
+        <!--sidebar-->
+        <div class="sidebar">
+            <div class="user_face" id="user_face">
+                <!--<div class="userdetail">
+                    <img src="images/2.jpg" alt=""/>
+                    <h2>山上清风吹</h2>
+                </div>
+                <ul id="userinfo_list">
+                    <li>
+                        <strong>90</strong>
+                        <span>关注</span>
+                    </li>
+                    <li>
+                        <strong>233</strong>
+                        <span>粉丝</span>
+                    </li>
+                    <li class="no">
+                        <strong>6</strong>
+                        <span>微薄</span>
+                    </li>
+                </ul>-->
+            </div>
+
+            <div class="hot_info" id="hot_info">
+                <div class="title"><a href="javascript:;" class="change">换一换</a>热门话题</div>
+                <ul class="hot_info_ul">
+                    <!--<li><span>699次</span><a href="#">热门话题</a></li>-->
+                </ul>
+            </div>
+
+        </div>
+        <!--sidebar end-->
+
+    </div>
+    <!--content end-->
+</div>
+</body>
+</html>
