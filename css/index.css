@@ -11,7 +11,7 @@
     overflow: hidden;
     content: '.';
 }
-
+p::selection{background: rgba(210, 255, 145, 0.47); color: rgba(200, 100, 100, 0.6)}
 .section{
 	max-height: 643px;
 	position: relative;
@@ -19,13 +19,14 @@
 }
 /* 第一页样式 */
 .section1{
-	background-image: url(../img/2.jpg);
+	background-image: url(../img/bj13.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0% 40%;
 	width: 100%;
 	height: 100%;
 }
+
 .sec_container{
 	/* max-width:760px; */
 	margin:0px auto;
@@ -41,7 +42,7 @@
 	top:-100px;
 	width: 170px;
 	height: 170px;
-	background-image: url(../img/face.jpg);
+	background-image: url(../img/face3.jpg);
 	background-size: 100% 100%;
 	border:5px solid #fff;
 }
@@ -102,7 +103,7 @@
 /* 第二页 */
 .section2{
 	position: relative;
-	background: url(../img/5.jpg) no-repeat;
+	background: url(../img/bj11.jpg) no-repeat;
 	background-size: cover;
 }
 
@@ -259,25 +260,69 @@
 /* 第三页样式 */
 .section3{
 	position: relative;
-	background: url(../img/sec_bg_3.jpg) no-repeat;
+	background: url(../img/bj9.jpg) no-repeat;
 	background-size: 100% 100%;
 }
+/*新添加*/
+.text{float: left;
+	width:400px;
+	margin-top:35px; position: absolute;
+	left:0;
+	top:74px;}
+.text .pp{font-size: 20px;
+	color: #ccc; line-height: 30px; font-family: '林志秀硬笔楷书'; position: absolute; -webkit-transform: translate3d(0,0,0);}
+
+.tab{
+	float: right;margin:35px 0 0 0; overflow: hidden; position: relative;
+	width:500px;
+	height:300px;-webkit-transition: 0.5s all ease;}
+
+.tab a{
+	-webkit-transition: 1s all ease;
+	color: #000; font-size: 18px; opacity: 0;
+	width:40px; font-family: '微软雅黑';
+	height:60px;background: rgba(0,0,0,.6); text-align: center;line-height: 60px; text-decoration: none;}
+.tab:hover a{opacity: 1;}
+.tab  a:active{text-decoration: none;background: rgba(0,0,0,.8);
+	color: rgba(255,0,0,.5);}
+.tab .prev{position: absolute;
+	left:0;
+	top:120px; z-index: 1; }
+.tab .next{ position: absolute;
+	right:0;top:120px; z-index: 1;}
+.tab ul{
+	width:500%;position: absolute;left:0; padding-left: 0;
+	top:0;}
+.tab ul li{ float: left;}
+.tab_list img{
+	width:500px;
+	height:300px;}
+.gangqin{
+	width:500px; position: absolute;
+	left:100px;
+	top:480px;}
+.gangqin ul{overflow: hidden;width: 100%;}
+.gangqin ul li{float:left; width:10%; height:100px; background: #fbfbff;
+	text-align:center;line-height:100px; font-size:30px; border:1px solid #000; margin-left:6px; list-style: none;}
+.gangqin ul li.on{ background:#333;}
+
+/*新添加*/
 .sec3 .sec_container{
 	position: relative;
 	padding:0;
-}
-.sec3 .sec_container {
 	border-radius:0 0;
 	width: 100%;
 	margin:0 auto;
-	background: #2196F3;
+	background:rgba(0,0,80,.5); position: relative;
 }
+.sec_memories{position: absolute;left: 100px;
+	top:0px;}
 .sec3 .sec_container .sec3_skill{
 	width: 1000px;
 	background: #00BCD4;;
 	margin:0 auto;
 }
-
+.sec3_introduce{}
 .sec3_introduce h2{
 	letter-spacing: 1em;
 	font-size: 32px;
@@ -296,172 +341,39 @@
 	float: left;
 	/*测试浮动与否的效果*/
 }
-.sec3_list .list .circle{
-	padding:10px 0;
-	width: 120px;
-	height: 123px;
-	margin:0 auto;
-}
-.sec3_list .list .list_instruction{
-	text-align: center;
-	font-family:'楷体';
-	font-weight: bolder;
-	font-size: 24px;
-	line-height: 1.2em;
-	margin:-20px 0;
-}
-.sec3_list .list .list_content{
-	line-height: 1.4em;
-	text-indent: 2em;
-	height: 7em;
-	padding:5px 20px;
-}
-.sec3_list .list .list_content em{
-	background-color:#F3F3F3;
-	padding:0 5px;
-	border-radius: 4px 4px;
-}
-/* 图标icon样式 */
-.icon_container{
-	padding:0px 10px;
-	margin-bottom: 5px;
-}
-.list_icon .icon{
-	margin-top: 5px;
-	display: inline-block;
-}
-.list_icon .icon1{
-	background-image: url(../img/listIcon.png);
-}
-.list_icon .show{
-	height: 58px;
-	line-height: 58px;
-}
-.list_icon .icon_container .list_bar{
-	display: inline-block;
-	width: 150px;
-	height: 20px;
-	border-radius: 20px 20px;
-	background:#CECECE;
-}
-.list_icon  .list_bar_rate{
-	display: inline-block;
-	height: 20px;
-	border-radius: 20px 20px;
-	margin-bottom: 15px;
-}
+/*.sec3_list .list .circle{*/
+	/*padding:10px 0;*/
+	/*width: 120px;*/
+	/*height: 123px;*/
+	/*margin:0 auto;*/
+/*}*/
+/*.sec3_list .list .list_instruction{*/
+	/*text-align: center;*/
+	/*font-family:'楷体';*/
+	/*font-weight: bolder;*/
+	/*font-size: 24px;*/
+	/*line-height: 1.2em;*/
+	/*margin:-20px 0;*/
+/*}*/
+/*.sec3_list .list .list_content{*/
+	/*line-height: 1.4em;*/
+	/*text-indent: 2em;*/
+	/*height: 7em;*/
+	/*padding:5px 20px;*/
+/*}*/
+/*.sec3_list .list .list_content em{*/
+	/*background-color:#F3F3F3;*/
+	/*padding:0 5px;*/
+	/*border-radius: 4px 4px;*/
+/*}*/
 
-.bar_percent{
-	display: inline-block;
-	padding-left: 15px;
-	color: #fff;
-	font-style: italic;
-	line-height: 20px;
-	position: relative;
-	top:-20px;
-	opacity: 0;
-}
-/* 技能评分百分比 */
-
-.list_icon .show .list_bar_rate{
-	width: 0%;
-}
-.list_icon .show1 .list_bar_rate{
-	background: #DE2821;
-}
-.list_icon .show2 .list_bar_rate{
-	background: #0F6BB9;
-}
-.list_icon .show3 .list_bar_rate{
-	background: #F04F00;
-}
-.list_icon .show4 .list_bar_rate{
-	background: #618DDD;
-}
-.list_icon .show5 .list_bar_rate{
-	background: #8BB721;
-}
-.list_icon .show6 .list_bar_rate{
-	background: #CA35B5;
-}
-.list_icon .show7 .list_bar_rate{
-	background: #2A75AC;
-}
-.list_icon .show8 .list_bar_rate{
-	background: #E54F27;
-}
-.list_icon .show9 .list_bar_rate{
-	background: #72B6DF;
-}
-.list_icon .show10 .list_bar_rate{
-	background: #AD50B5;
-}
-.list_icon .show11 .list_bar_rate{
-	background: #79CEF4;
-}
-.list_icon .show12 .list_bar_rate{
-	background: #FFBA49;
-}
-.list_icon .icon2{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -50px;
-}
-.list_icon .icon3{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -100px;
-}
-.list_icon .icon4{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -150px;
-}
-.list_icon .icon5{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -200px;
-}
-.list_icon .icon6{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -250px;
-}
-.list_icon .icon7{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -300px;
-}
-.list_icon .icon8{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -350px;
-}
-.list_icon .icon9{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -400px;
-}
-.list_icon .icon10{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -450px;
-}
-.list_icon .icon11{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -500px;
-}
-.list_icon .icon12{
-	background-image: url(../img/listIcon.png);
-	background-position: 0px -550px;
-}
-.list_icon .icon{
-	/* display: inline-block; */
-	background-size:50px;
-	background-repeat: no-repeat;
-	width: 50px;
-	height: 50px;
-	transition:All 0.4s ease-in-out;
-}
-.list_icon .icon:hover{
-	transform:rotate(360deg);
-}
+/*------------------------------------------*/
+/*-----------------------------------------------------------------------------------------*/
 /* 第四页 */
 .section4{
 	position: relative;
-	background:#524664;
-	background-size: 100% 100%;
+	background: url("../img/bj10.jpg") no-repeat;
+	background-size:100%; width: 100%;height: 100%;
 }
 .sec4_container{
 	width: 964px;
@@ -552,7 +464,7 @@
 /* 第五页样式 */
 .section5{
 	position: relative;
-	background: url(../img/bj7.jpg) no-repeat;
+	background: url(../img/bj8.jpg) no-repeat;
 	background-size: 100% 100%;
 	background-position-y: 35%;
 }
@@ -596,30 +508,39 @@
 	display: inline-block;
 	width: 200px;
 	height: 200px;
-	box-sizing:border-box;
+	box-sizing:border-box; position: relative;
+}
+
+.sec5_contact .contact .liti{
+	width:100px; height: 100px;overflow: hidden; position: relative;
+	-webkit-transform-style:preserve-3d; -webkit-transform: perspective(800px) rotateY(0deg) rotateX(0deg);-webkit-transition: 0.5s all ease;
 }
 .sec5_contact .contact a{
 	display: inline-block;
-	margin:0 50px 0 50px;
-	width: 100px;
-	height: 100px;
-}
-.contact1 .contactLink{
-	background: url(../img/contactIcon.png) no-repeat;
-	background-position: 0px 0px ;
-	-webkit-transition:All 0.3s ease-in-out ;
-	-ms-transition:All 0.3s ease-in-out ;
-	-moz-transition:All 0.3s ease-in-out ;
-	-o-transition: All 0.3s ease-in-out;
-	transition: All 0.3s ease-in-out;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top:0;
 
 }
+.liti a{
+	background: url(../img/contactIcon.png) no-repeat;
+	background-position: 0px -100px;
+}
+.sec5_contact .contact .liti .front{-webkit-transform: translateZ(50px);}
+.sec5_contact .contact .liti .back{ -webkit-transform: translateZ(-50px);}
+.sec5_contact .contact .liti .left{-webkit-transform: translate(-50px,0) rotateY(-90deg);}
+.sec5_contact .contact .liti .you{ -webkit-transform: translate(50px,0) rotateY(90deg);}
+.sec5_contact .contact .liti .top{-webkit-transform: translate(0,-50px) rotateX(90deg) ;}
+.sec5_contact .contact .liti .bottom{-webkit-transform: translate(0,50px) rotateX(-90deg);}
+.sec5_contact .contact .liti:hover{-webkit-transform: perspective(800px) rotateY(360deg) rotateX(360deg);}
 .contact1 .contactLink:hover{
-	background-position: 0px 0px !important;
+
 }
 .contact2 .contactLink{
 	background: url(../img/contactIcon.png) no-repeat;
-	background-position: 0 -200px ;
+	background-position: 0 -300px ;
 	-webkit-transition: All 0.1s ease-in-out  ;
 	-moz-transition: All 0.1s ease-in-out  ;
 	-ms-transition: All 0.1s ease-in-out  ;
@@ -628,11 +549,11 @@
 
 }
 .contact2 .contactLink:hover{
-	background-position: 0px -200px !important;
+
 }
 .contact3 .contactLink{
 	background: url(../img/contactIcon.png) no-repeat;
-	background-position: 0px -400px ;
+	background-position: 0px -503px ;
 	-webkit-transition:All 0.3s ease-in-out ;
 	-o-transition: All 0.3s ease-in-out;
 	-ms-transition: All 0.3s ease-in-out;
@@ -640,11 +561,10 @@
 	transition: All 0.3s ease-in-out;
 }
 .contact3 .contactLink:hover{
-	background-position: 0px -400px !important;
 }
 .contact4 .contactLink{
 	background: url(../img/contactIcon.png) no-repeat;
-	background-position: 0 -600px ;
+	background-position: 0 -700px ;
 	-webkit-transition:All 0.3s ease-in-out ;
 	-o-transition: All 0.3s ease-in-out;
 	-ms-transition: All 0.3s ease-in-out;
@@ -652,11 +572,10 @@
 	transition: All 0.3s ease-in-out;
 }
 .contact4 .contactLink:hover{
-	background-position: 0 -600px !important;
 }
 .contact5 .contactLink{
 	background: url(../img/contactIcon.png) no-repeat;
-	background-position: 0 -800px ;
+	background-position: 0 -900px ;
 	-webkit-transition:All 0.3s ease-in-out ;
 	-o-transition: All 0.3s ease-in-out;
 	-ms-transition: All 0.3s ease-in-out;
@@ -664,7 +583,6 @@
 	transition: All 0.3s ease-in-out;
 }
 .contact5 .contactLink:hover{
-	background-position: 0 -800px !important;
 }
 .contact_name h4{
 	text-align: center;
@@ -683,7 +601,7 @@
 /* 第六页样式 */
 .section6{
 	position: relative;
-	background: url(../img/sec_bg_6.jpg) no-repeat;
+	background: url(../img/bj14.jpg) no-repeat;
 	background-size: 100% 100%;
 }
 .sec6_title{
