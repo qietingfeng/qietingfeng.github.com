@@ -15,7 +15,7 @@ $(function(){
     //音乐播放器
    var iNow=0;
     var block=null;
-    var arr=['忧伤还是快乐','Insomnia','梦中的婚礼','雨的印记','友情岁月','soleil','满']
+    var arr=['Insomnia','忧伤还是快乐','梦中的婚礼','雨的印记','友情岁月','soleil','满']
     $('.bgmusic audio').attr('src','mp3/'+arr[iNow]+'.mp3')
     $('.bgmusic audio').get(0).play();
     $('.bgmusic .pause_1').click(function(){

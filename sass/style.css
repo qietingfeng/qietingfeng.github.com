@@ -247,7 +247,7 @@ html.fp-enabled, .fp-enabled body {
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .face1 {
   width: 28%;
   height: 500px;
-  background: #ccc;
+  background: rgba(115, 95, 127, 0.8);
   float: left;
   margin-right: 60px;
   position: relative;
@@ -269,7 +269,7 @@ html.fp-enabled, .fp-enabled body {
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .face1 span {
   font-size: 24px;
-  color: #c3ff99;
+  color: #58eee1;
   margin-top: 50px;
   display: block
 }
@@ -281,28 +281,28 @@ html.fp-enabled, .fp-enabled body {
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .face1 .social a:nth-child(1) {
   width: 40px;
   height: 40px;
-  background: url("../img/ad.png") -5px -5px;
+
   display: inline-block;
   margin-right: 10px
 }
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .face1 .social a:nth-child(2) {
-  background: url("../img/ad.png") -45px -5px
+
 }
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .face1 .social a:nth-child(3) {
-  background: url("../img/ad.png") -85px -5px
+
 }
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .face1 .social a:nth-child(4) {
-  background: url("../img/ad.png") -125px -5px
+
 }
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .skill {
   width: 60%;
   height: 500px;
-  background: #e3ff16;
-  float: left
+  background: rgba(115, 95, 127, 0.8);
+  float: left;
 }
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .skill h5 {
@@ -310,7 +310,7 @@ html.fp-enabled, .fp-enabled body {
   width: 200px;
   color: #000;
   font-weight: bold;
-  margin: 50px auto 0
+  margin: 50px auto 0;
 }
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .skill p {
@@ -335,14 +335,18 @@ html.fp-enabled, .fp-enabled body {
 }
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .skill .skill_li li i {
-  width: 350px;
+  position: absolute;
+  left:0;
+  top:0;
+  width: 0;
   height: 4px;
   background: #005;
   display: inline-block
 }
 
 .section2 .sec2 .sec_container .sec2_timeLine .me_content .skill .skill_li li b {
-  width: 40px;
+  position: relative;
+  width: 400px;
   height: 4px;
   background: #fff;
   display: inline-block;
@@ -609,6 +613,10 @@ html.fp-enabled, .fp-enabled body {
 .works5 .works_bg {
   background: url(../img/fish.png) no-repeat; background-size: 100%;
 }
+.works6 .works_bg {
+  background: url(../img/Mbile.png) no-repeat; background-size: 100%;
+}
+
 
 .section5 {
   position: relative;
@@ -669,6 +677,7 @@ html.fp-enabled, .fp-enabled body {
 .sec5_contact .contact .liti {
   width: 100px;
   height: 100px;
+  margin-left: 42px;
   overflow: hidden;
   position: relative;
   -webkit-transform-style: preserve-3d;
@@ -692,8 +701,7 @@ html.fp-enabled, .fp-enabled body {
 }
 
 .liti a {
-  background: url(../img/contactIcon.png) no-repeat;
-  background-position: 0px -100px
+  background: url(../img/youxiang3.png) no-repeat; background-size: 100%;
 }
 
 .sec5_contact .contact .liti .front {
@@ -739,43 +747,39 @@ html.fp-enabled, .fp-enabled body {
 }
 
 .contact2 .contactLink {
-  background: url(../img/contactIcon.png) no-repeat;
-  background-position: 0 -300px;
-  -webkit-transition: All 0.1s ease-in-out;
-  -moz-transition: All 0.1s ease-in-out;
-  -ms-transition: All 0.1s ease-in-out;
-  -o-transition: All 0.1s ease-in-out;
-  transition: All 0.1s ease-in-out
+  background: url(../img/phone.png) no-repeat; background-size: 100%;
+  -webkit-transition: All 0.5s ease-in-out;
+  -o-transition: All 0.5s ease-in-out;
+  -ms-transition: All 0.5s ease-in-out;
+  -moz-transition: All 0.5s ease-in-out;
+  transition: All 0.5s ease-in-out
 }
 
 .contact3 .contactLink {
-  background: url(../img/contactIcon.png) no-repeat;
-  background-position: 0px -500px;
-  -webkit-transition: All 0.3s ease-in-out;
-  -o-transition: All 0.3s ease-in-out;
-  -ms-transition: All 0.3s ease-in-out;
-  -moz-transition: All 0.3s ease-in-out;
-  transition: All 0.3s ease-in-out
+  background: url(../img/weibo3.png) no-repeat; background-size: 100%;
+  -webkit-transition: All 0.5s ease-in-out;
+  -o-transition: All 0.5s ease-in-out;
+  -ms-transition: All 0.5s ease-in-out;
+  -moz-transition: All 0.5s ease-in-out;
+  transition: All 0.5s ease-in-out
 }
 
 .contact4 .contactLink {
-  background: url(../img/contactIcon.png) no-repeat;
-  background-position: 0 -700px;
-  -webkit-transition: All 0.3s ease-in-out;
-  -o-transition: All 0.3s ease-in-out;
-  -ms-transition: All 0.3s ease-in-out;
-  -moz-transition: All 0.3s ease-in-out;
-  transition: All 0.3s ease-in-out
+  background: url(../img/github3.png) no-repeat;background-size: 100%;
+  -webkit-transition: All 0.5s ease-in-out;
+  -o-transition: All 0.5s ease-in-out;
+  -ms-transition: All 0.5s ease-in-out;
+  -moz-transition: All 0.5s ease-in-out;
+  transition: All 0.5s ease-in-out
 }
 
 .contact5 .contactLink {
-  background: url(../img/contactIcon.png) no-repeat;
-  background-position: 0 -900px;
-  -webkit-transition: All 0.3s ease-in-out;
-  -o-transition: All 0.3s ease-in-out;
-  -ms-transition: All 0.3s ease-in-out;
-  -moz-transition: All 0.3s ease-in-out;
-  transition: All 0.3s ease-in-out
+  background: url(../img/2qqq.png) no-repeat;background-size: 100%;
+  -webkit-transition: All 0.5s ease-in-out;
+  -o-transition: All 0.5s ease-in-out;
+  -ms-transition: All 0.5s ease-in-out;
+  -moz-transition: All 0.5s ease-in-out;
+  transition: All 0.5s ease-in-out
 }
 
 .contact_name h4 {
@@ -783,7 +787,7 @@ html.fp-enabled, .fp-enabled body {
   font-weight: bold;
   font-size: 32px;
   font-family: cursive, "Microsoft YaHei";
-  color: #656060
+  color: #bdbcb2
 }
 
 .contact_name p {
@@ -791,7 +795,7 @@ html.fp-enabled, .fp-enabled body {
   margin-top: -30px;
   font-family: 'Microsoft YaHei';
   font-size: 18px;
-  color: #333
+  color: #aeac9e
 }
 
 .section6 {
