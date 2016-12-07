@@ -1,125 +1,282 @@
-html{font-size: 20px}
-header{
-    width:18.75rem;
-    height:2.2rem;
-    background: #040404; position: relative;}
-.nav{
-    width:1.125rem;
-     position: absolute;
-    left:1.35rem;
-    top:0.7rem;z-index: 30}
-.nav span{
-    width:1.125rem;
-    height:0.1rem; background: #fff; display: block; margin-bottom: 0.25rem;}
-.ashadow{
-    width:18.75rem; position: fixed;
-    left:0;
-    top:0; z-index: 10;
-    height:100%; display: none;
-   }
-.ashadow .opa{
-    width:100%;
-    height:100%; opacity: 0.9; background: #000;}
-.ashadow ul{ position: absolute;
-    width: 100%;
-    top:2.2rem;}
-.ashadow ul li{ text-align: center;}
-.ashadow ul li a{display: block;
-    color: #fff;
-    font-size:0.8rem; margin: 0 2rem; line-height: 3rem; font-size: 0.8rem; border-bottom: 1px #ccc solid;}
-h1{font-size: 0.825rem;  position: absolute;
-    left:7.575rem;
-    top:0.625rem;
-    float: left;
-    color: #fff; z-index: 100;}
-.banner{position: relative;}
-.banner img{
-    width:18.75rem;
-    height:20.025rem;}
-.banner p{font-size: 0.85rem;
-    color: #fff;  position: absolute;
-    left:1.775rem;
-    bottom:8.425rem;}
-.banner .span1{
-    width:7.775rem;
-    height:2.1rem; background:#d41326; text-align: center;line-height: 2.1rem; font-size:1.6rem;
-    color: #fff; position: absolute;
-    left:1.725rem; bottom: 5.475rem;}
-.banner .span2{font-size:1.6rem; position: absolute;
-    left:10.25rem;
-    bottom:5.675rem;
-    color: #fff;}
-.acontent{
-    margin-top:2.15rem;}
-.acontent h2{font-size:1.125rem;
-    color: #000;
-    margin-left:1.375rem; }
-.acontent h2 span{font-size:0.9rem;
-    color: #e92033; margin-right:0.825rem; }
+html {
+    font-size: 20px
+}
 
-.acontent .ared{ display: block;
-    width:2.125rem;
-    height:0.2rem; background:#fe0000;
-    margin:0.7rem 0 0 3.325rem; }
-.acontent p{
-    width:11.2rem; font-size: 0.675rem;
-    color: #464646; font-family:'微软雅黑';
-    margin:1.17rem 0 0 3.35rem; line-height:1.2rem; }
-.about{
-    width:18.75rem;
-    height:9.975rem;background: #fafafa;
-    margin-top:1.4rem;}
-.about{overflow: hidden;}
-.about_list{
-    width:31.5rem;}
-.about_list li{
-    margin:2.125rem 0.25rem 0 2.325rem;
-    width:2.925rem; text-align: center;
-    float: left;}
-.about_list li svg{
+header {
+    width: 18.75rem;
+    height: 2.2rem;
+    background: #040404;
+    position: relative;
+}
+
+.nav {
+    width: 1.125rem;
+    position: absolute;
+    left: 1.35rem;
+    top: 0.7rem;
+    z-index: 30;
+}
+.nav .open{position: absolute;
+    left:0;
+    top:0;}
+
+.nav span {
+    width: 1.125rem;
+    height: 0.1rem;
+    background: #fff;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+.nav .close{display: inline-block;display:none ;
+    background: url("../img/close.png") no-repeat;
+    width:1.125rem;
+    height:1rem;  background-size: 100%;  position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 30;
+}
+
+.ashadow {
+    width: 18.75rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    display: none;
+}
+
+.ashadow .opa {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: #000;
+}
+
+.ashadow ul {
+    position: absolute;
+    width: 100%;
+    top: 2.2rem;
+}
+
+.ashadow ul li {
+    text-align: center;
+}
+
+.ashadow ul li a {
+    display: block;
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 0 2rem;
+    line-height: 3rem;
+    font-size: 0.8rem;
+    border-bottom: 1px #ccc solid;
+}
+
+h1 {
+    font-size: 0.825rem;
+
+    position: absolute;
+    left:7.5rem;
+    top:0.625rem;
+    color: #fff;z-index: 100;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 18.75rem;
+    height: 20.025rem;
+}
+
+.banner p {
+    font-size: 0.85rem;
+    color: #fff;
+    position: absolute;
+    left: 1.775rem;
+    bottom: 8.425rem;
+}
+
+.banner .span1 {
+    width: 7.775rem;
+    height: 2.1rem;
+    background: #d41326;
+    text-align: center;
+    line-height: 2.1rem;
+    font-size: 1.6rem;
+    color: #fff;
+    position: absolute;
+    left: 1.725rem;
+    bottom: 5.475rem;
+}
+
+.banner .span2 {
+    font-size: 1.6rem;
+    position: absolute;
+    left: 10.25rem;
+    bottom: 5.675rem;
+    color: #fff;
+}
+
+.acontent {
+    margin-top: 2.15rem;
+}
+
+.acontent h2 {
+    font-size: 1.125rem;
+    color: #000;
+    margin-left: 1.375rem;
+}
+
+.acontent h2 span {
+    font-size: 0.9rem;
+    color: #e92033;
+    margin-right: 0.825rem;
+}
+
+.acontent .ared {
+    display: block;
+    width: 2.125rem;
+    height: 0.2rem;
+    background: #fe0000;
+    margin: 0.7rem 0 0 3.325rem;
+}
+
+.acontent p {
+    width: 11.2rem;
+    font-size: 0.675rem;
+    color: #464646;
+    font-family: '微软雅黑';
+    margin: 1.17rem 0 0 3.35rem;
+    line-height: 1.2rem;
+}
+
+.about {
+    overflow-y: scroll;
+    overflow: scroll;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+.about_list {
+    width: 35.5rem;
+    overflow-y: scroll;
+}
+
+.about_list li {
+    margin: 2.125rem 0.25rem 0 2.325rem;
+    width: 2.925rem;
+    text-align: center;
+    float: left;
+}
+
+.about_list li svg {
     width: 2.5rem;
     height: 1.75rem;
 }
-.about_list .atem1{ font-size:0.7rem;
-    color: #484848;display: block;
-    margin:1.25rem 0 0.675rem 0;}
 
-.about_list .atem2{ font-size:0.475rem;
-    color: #989898;display: block; font-weight: bold;
-    margin-bottom:0.35rem;}
-.acontent2{margin-top:2.1rem;}
-.acontent3{background: #29282e; padding-bottom: 1.7rem; padding-top: 1.45rem;}
-.acontent3 h2{
-    color: #fff;}
-.acontent3 h2 span{
-    color: #fff;}
-.acontent3 .bred{background: #fff;}
-.acontent3 .cred{
-    color: #fff;}
-.acontent4 p:nth-child(2){margin-top: 1.5rem}
-.acontent4 p:nth-child(3){margin-top: 1.5rem}
-.acontent4 .amap{ margin-top:1.325rem; }
-.acontent4 img{
-    width:18.75rem;
-    height:6.075rem;}
-.mp4{
-    width:16rem;
-    margin:1.25rem auto 0; position: relative;}
-.mp4 video{
-    width:16rem;}
-.mp4 .bofang{
-    width:2.3rem;
-    height:2.3rem; position: absolute;
-    left:6.95rem;
-    top:3.7rem; background: url("../img/aaa.png") no-repeat; background-size: 100%; }
-.mp4 .zanting{ font-size: 0.5rem;
-    color: #fff; float: left;
-    margin-right:0.25rem;
-    margin-top:0.5rem;}
-.mp4 .abtn{ font-size: 0.5rem;
-    color: #fff; float: left;margin-top:0.5rem}
-.pro_box{ width:6rem; height:0.2rem; margin-top:0.7rem; margin-left:10px; background:#fff; float:left; position:relative;}
-.pro_bar{ width:50%; height:100%; background:#999;}
-.pro_btn{ position:absolute; width:0.3rem; height:0.2rem; background:#f90; top:0; left:50%; cursor:pointer;}
+.about_list .atem1 {
+    font-size: 0.7rem;
+    color: #484848;
+    display: block;
+    margin: 1.25rem 0 0.675rem 0;
+}
+
+.about_list .atem2 {
+    font-size: 0.475rem;
+    color: #989898;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+}
+
+.acontent2 {
+    margin-top: 2.1rem;
+}
+
+.acontent3 {
+    background: #29282e;
+    padding-bottom: 1.7rem;
+    padding-top: 1.45rem;
+}
+
+.acontent3 h2 {
+    color: #fff;
+}
+
+.acontent3 h2 span {
+    color: #fff;
+}
+
+.acontent3 .bred {
+    background: #fff;
+}
+
+.acontent3 .cred {
+    color: #fff;
+}
+
+.acontent4 p:nth-child(2) {
+    margin-top: 1.5rem
+}
+
+.acontent4 p:nth-child(3) {
+    margin-top: 1.5rem
+}
+
+.acontent4 p:nth-child(4) {
+    margin-top: 1.5rem
+}
+
+.acontent4 p:nth-child(5) {
+    margin-top: 1.5rem
+}
+
+.acontent4 .amap {
+    margin-top: 1.325rem;height: 6.05rem
+}
+
+.acontent4 img {
+    width: 18.75rem;
+    height: 6.075rem;
+}
+
+.mp4 {
+    width: 16rem;
+    margin: 1.25rem auto 0;
+    position: relative;
+}
+.rows {
+    overflow: hidden;
+    overflow-y: auto;
+}
+.rows::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+}
+.rows::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.rows::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 28px;
+}
+.rows::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
 
 
