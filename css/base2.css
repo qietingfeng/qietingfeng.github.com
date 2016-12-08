@@ -113,7 +113,8 @@ h1 {
   overflow: hidden; }
 
 .content .shuju_li {
-  margin-top: 1.425rem; }
+  margin-top: 1.425rem;
+  width:75rem;}
   .content .shuju_li li {
     float: left;
     padding: 0 1.225rem 0 1.35rem; }

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded',function(){
     var aLi = oUl.children;
     var oOl = document.querySelector('.btn_list')
     var aBtn = oOl.children;
-    oUl.style.width = aLi[0].offsetWidth*aLi.length/rem+'rem';
+    //oUl.style.width = aLi[0].offsetWidth*aLi.length/rem/2+'rem';
     var iNow = 0;
     var bok=false;
     var x = 0;
