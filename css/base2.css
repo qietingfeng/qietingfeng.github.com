@@ -2,7 +2,7 @@ html {
   font-size: 20px; }
 
 header {
-  width: 18.75rem;
+  width: 16rem;
   height: 2.2rem;
   background: #040404;
   position: relative; }
@@ -39,7 +39,7 @@ header {
   z-index: 30; }
 
 .ashadow {
-  width: 18.75rem;
+  width: 16rem;
   position: fixed;
   left: 0;
   top: 0;
@@ -79,20 +79,20 @@ h1 {
   z-index: 100; }
 
 .banner img {
-  width: 18.75rem;
+  width: 16rem;
   height: 7.5rem; }
 
 .btn {
   height: 3.875rem;
-  width: 100%;
+  width: 16rem;
   background: #fafafa;
   padding-bottom: 1.575rem;
   padding-top: 1.85rem; }
   .btn ol {
-    margin-left: 1.25rem; }
+     display: flex;}
     .btn ol li {
-      float: left;
-      margin-right: 2.075rem; }
+      flex: 1;
+       }
       .btn ol li a {
         display: block;
         text-align: center; }
@@ -103,28 +103,25 @@ h1 {
           margin: 0.9rem 0 0.35rem 0; }
         .btn ol li a span {
           font-size: 0.55rem; }
-      .btn ol li:nth-child(1) {
-        margin-right: 1.95rem; }
-      .btn ol li:nth-child(4) {
-        margin-right: 0; }
 
 .content {
-  width: 18.75rem;
+  width:16rem;
   overflow: hidden; }
 
 .content .shuju_li {
   margin-top: 1.425rem;
-  width:75rem;}
+  width:64rem; display: flex;}
   .content .shuju_li li {
-    float: left;
-    padding: 0 1.225rem 0 1.35rem; }
+    width:16rem;
+    padding: 0 0.5rem 0 1rem; }
     .content .shuju_li li .li_con {
-      width: 16.1rem; }
+      float: left;  }
       .content .shuju_li li .li_con h3 {
         font-size: 1.15rem;
         height: 1.15rem;
         line-height: 1.15rem;
-        color: #e30b20; }
+        color: #e30b20;
+        width:14.5rem;}
         .content .shuju_li li .li_con h3 span {
           display: inline-block;
           width: 0.2rem;
@@ -132,11 +129,11 @@ h1 {
           background: #e30b20;
           margin-right: 0.875rem; }
       .content .shuju_li li .li_con img {
-        width: 14.925rem;
+        width: 13rem;
         height: 4rem;
-        margin: 2.7rem 0 0 1.125rem; }
+        margin: 2.7rem 0 0 1rem; }
       .content .shuju_li li .li_con p {
-        width: 14.25rem;
+        width: 13rem;
         line-height: 1.2rem;
         margin: 2.1rem 0 0 1.125rem;
         font-size: 0.7rem;

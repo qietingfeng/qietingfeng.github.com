@@ -1,9 +1,9 @@
 var rem=20;
 ;(function(win,doc){
-    var rem=20/375*doc.documentElement.clientWidth;
+    var rem=20/320*doc.documentElement.clientWidth;
     doc.documentElement.style.fontSize=rem+'px';
     win.addEventListener('resize',function(){
-        rem = 20/375*doc.documentElement.clientWidth;
+        rem = 20/320*doc.documentElement.clientWidth;
         doc.documentElement.style.fontSize = rem+'px';
     },false)
 })(window,document);
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 }
                 this.className='active';
 
-                x = -this.index*aLi[0].offsetWidth/rem;
+                x = -this.index*16;
 
                 oUl.style.WebkitTransition = '.5s all ease';
                 oUl.style.WebkitTransform = 'translate3d('+x+'rem,0,0)';
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded',function(){
                     }
                 }
             }
-            x = -iNow*aLi[0].offsetWidth/rem;
+            x = -iNow*16;
 
             oUl.style.WebkitTransition = '.5s all ease';
 
